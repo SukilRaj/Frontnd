@@ -12,17 +12,16 @@ body {
 }
 
 .typewriter-text {
-  border-right: solid 3px rgba(0, 255, 0, 0.75);
+  --glow-color: rgb(62, 42, 241);
+  --glow-spread-colour: rgba(29, 90, 204, 0.964);
+  --enhanced-glow-color: rgb(59, 211, 150);
+  --btn-color: rgb(195, 196, 201);
+  border-right: solid 3px rgba(18, 92, 203, 0.75);
   white-space: nowrap;
   overflow: hidden;
-  font-family: monospace;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 25px;
   color: #fff;
-  text-shadow: 
-    0 0 5px rgba(0, 255, 0, 0.75), 
-    0 0 10px rgba(0, 255, 0, 0.75), 
-    0 0 15px rgba(0, 255, 0, 0.75), 
-    0 0 20px rgba(0, 255, 0, 0.75);
 }
 
 .typewriter-text {
@@ -30,9 +29,17 @@ body {
     animated-cursor 400ms steps(30, end) infinite;
 }
 
+.typewriter-text:hover{
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em 0.25em var(--glow-color),
+  0 0 4em 2em var(--glow-spread-colour),
+  inset 0 0 0.75em 0.25em var(--glow-color);
+}
+
 .neon-text {
-  color: aquamarine;
-  text-shadow: 0 0 30px rgb(170, 232, 232), 0 0 30px rgb(170, 232, 232);
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 30px rgb(255, 255, 255), 0 0 30px rgb(255, 255, 255);
 }
 
 @keyframes animated-text {
@@ -40,7 +47,7 @@ body {
     width: 0;
   }
   to {
-    width: 425px;
+    width: 310px;
   }
 }
 
